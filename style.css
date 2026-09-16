@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #111;
+    width: 100%;
+    padding: 15px 100px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ff4d6d;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-left: 20px;
+}
+
+.navigation a:hover {
+    color: #ff4d6d;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #000, #222);
+    padding: 100px;
+    color: #fff;
+    background-image: url("background.avif");
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+
+}
+
+
+.main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.main div {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 600px;
+}
+
+
+.main h2 span {
+    color: #ff4d6d;
+    font-size: 2em;
+}
+
+.main-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ff4d6d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #ff1e4d;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.7em;
+    margin-right: 15px;
+}
+
+
+.title {
+    text-align: center;
+    color: #ff4d6d;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    position: relative;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 3em;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+.projects {
+    background-color: #111;
+    padding: 60px 0;
+    min-height: auto;
+    padding: 60px 0;
+}
+
+.project-card {
+    background-color: #fff;
+    width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.project-image img {
+     width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+.project-image {
+    height: 200px !important;
+    transform: none !important;
+}
+
+.project-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.project-category {
+    color: #777;
+}
+
+.project-title {
+    display: block;
+    margin: 10px 0;
+}
+
+.more-details {
+    color: #ff4d6d;
+    text-decoration: none;
+}
+
+.contact .card {
+    background-color: #f9f9f9;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4d6d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.services .icon i {
+    font-size: 60px;      
+    color: #ff4d6d;       
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+
+.services .card:hover .icon i {
+    transform: scale(1.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+.main {
+    background-image: url("background.avif");
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main div h2,
+.main div span,
+.main .main-btn,
+.main .social-icons {
+    animation: fadeSlide 1s ease forwards;
+    opacity: 0;
+}
+
+.main div h2 { animation-delay: 0.2s; }
+.main div span { animation-delay: 0.4s; }
+.main .main-btn { animation-delay: 0.6s; }
+.main .social-icons { animation-delay: 0.8s;}
+
+.card,
+.project-card {
+    transition: 0.4s ease;
+}
+.card:hover,
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.15);
+}
+
+.main-btn {
+    transition: 0.3s ease;
+}
+
+.main-btn:hover {
+    transform: scale(1.08);
+}
+
+body {
+  background: #111;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+}
+
+.details-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff4d6d;
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.details-container {
+  width: 300px;
+  margin: 120px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.details-container h2 {
+  color: #ff4d6d;
+  margin-bottom: 10px;
+
+}
+
+#price {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#ingredients li {
+  list-style: none;
+  padding: 5px 0;
+}
+/* ABSOLUTE FINAL FIX — DO NOT TOUCH ABOVE */
+
+.projects .content {
+    align-items: flex-start;
+}
+
+.project-card {
+    width: 280px !important;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100% !important;
+    height: 200px !important;
+    overflow: hidden !important;
+    transform: none !important;
+}
+
+.project-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    min-height: 0 !important;
+    display: block !important;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+/* =================== BOOKING SECTION =================== */
+.booking-section {
+    padding: 60px 20px;
+    background-color: #1a1a1a; /* خلفية داكنة تناسب مود مطاعم السوشي */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #252525;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ff4d4d; /* لون أحمر/أورنج جاذب للانتباه */
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin-bottom: 30px;
+}
+
+/* تنسيق الحقول */
+.form-control {
+    margin-bottom: 20px;
+    text-align: left; /* عشان الكلام يبقى من الشمال لليمين بما إنه إنجليزي */
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* تأثير عند الضغط على الحقل */
+.form-control input:focus {
+    outline: none;
+    border-color: #ff4d4d;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.2);
+}
+
+/* رسايل الخطأ (مخفية مسبقاً) */
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none; /* مخفية لحد ما نـظهرها بالـ JS */
+}
+
+/* الـ Class ده هنضيفه بالـ JS لما المستخدم يغلط عشان يظهر الرسالة */
+.form-control.invalid .error-message {
+    display: block;
+}
+
+.form-control.invalid input {
+    border-color: #ff4d4d;
+}
+
+/* زرار الإرسال */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #ff3333;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* صندوق رسالة النجاح */
+.success-box {
+    background-color: #27ae60;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+

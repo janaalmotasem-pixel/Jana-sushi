@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="details-container">
+    <h2 id="title"></h2>
+    <p id="price"></p>
+
+    <h3>Ingredients</h3>
+    <ul id="ingredients"></ul>
+
+    if (!foodData[item]) {
+  document.querySelector(".details-container").innerHTML = `
+    <h2>Item not found 🍣</h2>
+    <p>Please go back and choose another type of sushi.</p>
+    <a href="index.html" class="main-btn">Back to menu</a>
+  `;
+}
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
